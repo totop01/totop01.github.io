@@ -2,3 +2,5 @@
 Thumbs.db
 node_modules/
 yarn.lock
+.deploy_git
+.github
