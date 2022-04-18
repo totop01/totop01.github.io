@@ -22,7 +22,7 @@
 
   
 
-  <title>发布流程 | wolp</title>
+  <title>wolp</title>
 
   
 
@@ -43,9 +43,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container post">
+<header class="header-container">
   
-    <div class="post-image" style="background-image: url(https://7465-test-9g28n0kc3da62e81-1305695530.tcb.qcloud.la/my-image.png?sign=d523cf7697d21b49d89b4321cb6698be&amp;t=1646278119)"></div>
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
   
 
   <!-- navbar -->
@@ -93,116 +93,41 @@
 
   
   
-    <div class="header-content">
-      <div class="post-text layout-block">
-        <div class="layout-margin">
-          <h1 class="title-wrap">发布流程</h1>
-          <h2 class="title-sub-wrap">
-            <strong>wolp</strong>
-            <span>发布于</span>
-            <time  class="article-date" datetime="2022-03-03T02:38:55.000Z" itemprop="datePublished">2022-03-03</time>
-          </h2>
-          <ul class="wrap-list dark">
-  
-</ul>
-          <ul class="wrap-list dark">
-  
-</ul>
-        </div>
-      </div>
-    </div>
-  
 
   
+  
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap"></h1>
+        
+      </div>
+    </div>
   
   
 </header>
 
-    <!-- 文章 -->
+    <!-- 分页(其他自定义页面) -->
 
-<!-- 文章内容 -->
+<!-- 自定义页面 -->
+
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
-      
-      
-      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><p><a target="_blank" rel="noopener" href="https://github.com/">github</a>账号，并创建一个仓库<br>配置<a target="_blank" rel="noopener" href="https://nodejs.org/en/">nodejs</a><br>配置<a target="_blank" rel="noopener" href="http://git-scm.com/">git</a> </p>
-<h2 id="一-初始"><a href="#一-初始" class="headerlink" title="一 初始"></a>一 初始</h2><p>创建一个文件夹，拉取仓库。<br>git clone &lt;你的仓库地址&gt;<br>初始化 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
-
-<p>下载 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> 具体可以看官方文档</p>
-<h2 id="二-安装"><a href="#二-安装" class="headerlink" title="二 安装"></a>二 安装</h2><p>安装Hexo 成功后 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/miiiku/hexo-theme-flexblock.git ./themes/flex-block</span><br></pre></td></tr></table></figure>
-
-<p>编辑<code>_config.yml</code>文件找到<strong>theme</strong>并设置值为<code>flex-block</code></p>
-<h2 id="三-部署"><a href="#三-部署" class="headerlink" title="三 部署"></a>三 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/one-command-deployment">部署</a></h2><ol>
-<li>安装 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>2 .修改_config.yml 文件中的deploy </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt; #https://github.com/totop01/totop01.github.io</span><br><span class="line">  branch: [branch] #分支 建议新建一个分支把要发布的文件放到改分支上</span><br><span class="line">  message: [message] #提交信息</span><br></pre></td></tr></table></figure>
-
-<p>3 执行命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-
-<h2 id="四-设置"><a href="#四-设置" class="headerlink" title="四 设置"></a>四 设置</h2><p>进入github 仓库设置 找到pages 选择你要发布的分支保存，过一会通过username.github.io 访问你的页面 </p>
+        <h4 id="发起抽奖"><a href="#发起抽奖" class="headerlink" title="发起抽奖"></a>发起抽奖</h4><p>开奖时间、中奖名额、奖励</p>
+<h4 id="上一次的抽奖配置"><a href="#上一次的抽奖配置" class="headerlink" title="上一次的抽奖配置"></a>上一次的抽奖配置</h4><h4 id="抽奖详情"><a href="#抽奖详情" class="headerlink" title="抽奖详情"></a>抽奖详情</h4><p>开奖时间、红包奖励、参与人数</p>
+<h4 id="取消抽奖（有人参与就不能取消抽奖）"><a href="#取消抽奖（有人参与就不能取消抽奖）" class="headerlink" title="取消抽奖（有人参与就不能取消抽奖）"></a>取消抽奖（有人参与就不能取消抽奖）</h4><h4 id="抽奖结果"><a href="#抽奖结果" class="headerlink" title="抽奖结果"></a>抽奖结果</h4><p>中奖人数、中奖人、中奖积分</p>
+<h4 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h4><p>积分余额、</p>
+<h4 id="积分明细"><a href="#积分明细" class="headerlink" title="积分明细"></a>积分明细</h4><p>时间、积分数、变更内容(奖励内容\中奖名额)</p>
 
       </section>
 
       
       
-        <nav class="article-nav">
-          
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-      <div class="card-cover" background-image-lazy data-img="https://7465-test-9g28n0kc3da62e81-1305695530.tcb.qcloud.la/my-image.gif?sign=ddb62049ab829480c5984c278fef7f5e&amp;t=1646389269"></div>
-    
-    <div class="card-text">
+
       
-        <a href="/2022/03/04/console/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">console</h2>
-        </a>
       
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
-          
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2022/03/02/hello-world/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Hello World</h2>
-        </a>
-      
-      <div class="card-text--row">Older</div>
-    </div>
-  </article>
-</div>
-          
-        </nav>
-      
-
-      <section class="page-message-container layout-padding">
-        
-
-
-  
-  
-
-  
-  
-
-
-      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -239,8 +164,6 @@
     </div>
   </div>
 </section>
-
-      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -286,6 +209,7 @@
     </div>
   </article>
 </div>
+
 
     <!-- footer container -->
 <footer id="footer" class="footer">

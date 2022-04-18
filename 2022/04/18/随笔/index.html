@@ -22,7 +22,7 @@
 
   
 
-  <title>传输协议 | wolp</title>
+  <title>wolp</title>
 
   
 
@@ -96,11 +96,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">传输协议</h1>
+          <h1 class="title-wrap"></h1>
           <h2 class="title-sub-wrap">
             <strong>wolp</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-03-28T08:15:34.000Z" itemprop="datePublished">2022-03-28</time>
+            <time  class="article-date" datetime="2022-04-18T07:34:45.829Z" itemprop="datePublished">2022-04-18</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -129,7 +129,18 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        
+        <h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><p>强缓存：浏览器不与服务端协商直接取浏览器缓存</p>
+<p>协商缓存：浏览器会先向服务器确认资源的有效性后才决定是从缓存中取资源还是重新获取资源</p>
+<p><strong>实现</strong>：在nginx的请求头配置里加上 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location /picture/ &#123; </span><br><span class="line">    add_header Cache-Control no-cache;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后重启nginx：<code>nginx -s reload</code>使配置生效</p>
+<p>再次发起请求后，请求头会带上If-Modified-Since和If-None-Match </p>
+<p>服务端（nginx）收到这两项后，会与资源当前生成的Etag和Last-Modified做比较，如果两者都一致，说明资源没有更新，服务端会返回304空响应；否则，说明资源有更新，服务端会将完整的资源内容返回</p>
+<p><strong>no-cache与no-store的区别</strong></p>
+<p>no-cache表示不缓存过期资源，缓存会向服务器进行有效处理确认之后处理资源</p>
+<p>而no-store才是真正的不进行缓存</p>
+
       </section>
 
       
@@ -140,12 +151,10 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://7465-test-9g28n0kc3da62e81-1305695530.tcb.qcloud.la/my-image.gif?sign=ddb62049ab829480c5984c278fef7f5e&amp;t=1646389269"></div>
-    
     <div class="card-text">
       
-        <a href="/2022/03/04/console/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">console</h2>
+        <a href="/2022/04/09/react/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">(no title)</h2>
         </a>
       
       <div class="card-text--row">Older</div>
@@ -187,7 +196,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>4</span>
+        <span>5</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
