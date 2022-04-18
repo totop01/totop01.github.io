@@ -22,7 +22,7 @@
 
   
 
-  <title>console | wolp</title>
+  <title>计算机网络 | wolp</title>
 
   
 
@@ -45,7 +45,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://7465-test-9g28n0kc3da62e81-1305695530.tcb.qcloud.la/my-image.gif?sign=ddb62049ab829480c5984c278fef7f5e&amp;t=1646389269)"></div>
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
   
 
   <!-- navbar -->
@@ -96,16 +96,18 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">console</h1>
+          <h1 class="title-wrap">计算机网络</h1>
           <h2 class="title-sub-wrap">
             <strong>wolp</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-03-04T09:59:03.000Z" itemprop="datePublished">2022-03-04</time>
+            <time  class="article-date" datetime="2022-03-28T08:15:34.000Z" itemprop="datePublished">2022-03-28</time>
           </h2>
           <ul class="wrap-list dark">
   
 </ul>
           <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E5%AF%B9%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E7%BD%91%E7%BB%9C%E9%87%8D%E6%96%B0%E8%BF%9B%E8%A1%8C%E4%BA%86%E5%AD%A6%E4%B9%A0%EF%BC%8C%E6%9C%AC%E6%96%87%E4%B9%9F%E7%9B%B8%E5%BD%93%E4%BA%8E%E6%98%AF%E7%AC%94%E8%AE%B0/">🏷️ 对大学计算网络重新进行了学习，本文也相当于是笔记</a></li>
   
 </ul>
         </div>
@@ -129,85 +131,15 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p><img src="../images/ad57f756ce6fc7b14.jpeg"></p>
-<p><code>&#123;% asset_img ad57f756ce6fc7b14.jpeg This is an example image %&#125;</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock %&#125;</span><br><span class="line">alert(&#x27;Hello World!&#x27;);</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong><code>Console</code></strong> 对象提供了浏览器控制台调试的接口（如：Firefox 的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">Web Console</a>）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。</p>
-<p><code>Console</code> 对象可以从任何全局对象中访问到，如 浏览器作用域上的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window"><code>Window</code></a>，以及通过属性控制台作为workers中的特定变体的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WorkerGlobalScope"><code>WorkerGlobalScope</code></a>。可以通过 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/console"><code>Window.console</code></a> 引用，也可以简单的通过 <code>console</code> 引用。例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;Failed to open the specified link&quot;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/assert"><code>Console.assert()</code></a></p>
-<p>如果第一个参数为 <code>false</code> ，则将消息和堆栈跟踪记录到控制台。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/clear"><code>Console.clear()</code></a></p>
-<p>清空控制台，并输出 <code>Console was cleared</code>。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/count"><code>Console.count()</code></a></p>
-<p>以参数为标识记录调用的次数，调用时在控制台打印标识以及调用次数。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/countReset"><code>Console.countReset()</code></a></p>
-<p>重置指定标签的计数器值。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/debug"><code>Console.debug()</code></a></p>
-<p>在控制台打印一条 <code>&quot;debug&quot;</code> 级别的消息。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/dir"><code>Console.dir()</code></a></p>
-<p>显示一个由特定的 Javascript 对象列表组成的可交互列表。这个列表可以使用三角形隐藏和显示来审查子对象的内容。.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/dirxml"><code>Console.dirxml()</code></a></p>
-<p>打印 XML/HTML 元素表示的指定对象，否则显示 JavaScript 对象视图。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/error"><code>Console.error()</code></a></p>
-<p>打印一条错误信息，使用方法可以参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a>。</p>
-</li>
-<li><p><code>Console.exception()</code> Non-Standard Deprecated</p>
-<p><code>error()</code> 方法的别称。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/group"><code>Console.group()</code></a></p>
-<p>创建一个新的内联 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#using_groups_in_the_console">group</a>, 后续所有打印内容将会以子层级的形式展示。调用 <code>groupEnd()</code>来闭合组。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/groupCollapsed"><code>Console.groupCollapsed()</code></a></p>
-<p>创建一个新的内联 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#using_groups_in_the_console">group</a>。使用方法和 <code>group()</code> 相同，不同的是，<code>groupCollapsed()</code> 方法打印出来的内容默认是折叠的。调用<code>groupEnd()</code>来闭合组。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/groupEnd"><code>Console.groupEnd()</code></a></p>
-<p>闭合当前内联 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/info"><code>Console.info()</code></a></p>
-<p>打印资讯类说明信息，使用方法可以参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a>。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/log"><code>Console.log()</code></a></p>
-<p>打印内容的通用方法，使用方法可以参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a>。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/profile"><code>Console.profile()</code></a> Non-Standard</p>
-<p>Starts the browser’s built-in profiler (for example, the <a target="_blank" rel="noopener" href="https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html">Firefox performance tool</a>). You can specify an optional name for the profile.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/profileEnd"><code>Console.profileEnd()</code></a> Non-Standard</p>
-<p>Stops the profiler. You can see the resulting profile in the browser’s performance tool (for example, the <a target="_blank" rel="noopener" href="https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html">Firefox performance tool</a>).</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/table"><code>Console.table()</code></a></p>
-<p>将列表型的数据打印成表格。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/time"><code>Console.time()</code></a></p>
-<p>启动一个以入参作为特定名称的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#Timers">计时器</a>，在显示页面中可同时运行的计时器上限为10,000.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/timeEnd"><code>Console.timeEnd()</code></a></p>
-<p>结束特定的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#Timers">计时器</a> 并以毫秒打印其从开始到结束所用的时间。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/timeLog"><code>Console.timeLog()</code></a></p>
-<p>打印特定 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#timers">计时器</a> 所运行的时间。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/timeStamp"><code>Console.timeStamp()</code></a> Non-Standard</p>
-<p>添加一个标记到浏览器的 <a target="_blank" rel="noopener" href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> 或 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> 工具。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/trace"><code>Console.trace()</code></a></p>
-<p>输出一个 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#stack_traces">stack trace</a>。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/warn"><code>Console.warn()</code></a></p>
-<p>打印一个警告信息，可以使用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/console#using_string_substitutions">string substitution</a> 和额外的参数。</p>
-</li>
-</ul>
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>三大网络：<strong>电信网络</strong>、<strong>有线电视网络</strong>和<strong>计算机网络</strong></p>
+<p>电话网络提供电话、电报及传真等服务</p>
+<p>有线电视网络向用户传送各种电视节目</p>
+<p>计算机网络使用户能够在计算计之间传送数据文件</p>
+<p>互联网的两个基本特点：<strong>连通性</strong>和<strong>共享</strong></p>
+<h3 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h3><p>计算机网络由若干<strong>节点</strong>和<strong>链路</strong>组成，网络中的节点可是计算机、集线器、交换机和路由器</p>
+<p>internet(互连网) 通用名词，它泛指由多个计算机网络互连而成的计算机网络</p>
+<p>Internet(互联网) 专用名词，指当前全球最大的、开放的、由众多网络互相连接而成的特定互连网，它采取TCP/IP协议作为通信的规则、且前身是美国的arpanet</p>
+<p>制定互联网的正式标准的三个阶段: 互联网草案 -&gt; 建议标准 -&gt; 互连网标准</p>
 
       </section>
 
@@ -220,8 +152,8 @@
     
     <div class="card-text">
       
-        <a href="/2022/03/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">计算机网络</h2>
+        <a href="/2022/04/01/%E9%9A%8F%E7%AC%94/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">随笔</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -233,12 +165,12 @@
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://7465-test-9g28n0kc3da62e81-1305695530.tcb.qcloud.la/my-image.png?sign=d523cf7697d21b49d89b4321cb6698be&amp;t=1646278119"></div>
+      <div class="card-cover" background-image-lazy data-img="https://7465-test-9g28n0kc3da62e81-1305695530.tcb.qcloud.la/my-image.gif?sign=ddb62049ab829480c5984c278fef7f5e&amp;t=1646389269"></div>
     
     <div class="card-text">
       
-        <a href="/2022/03/03/%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">发布流程</h2>
+        <a href="/2022/03/04/console/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">console</h2>
         </a>
       
       <div class="card-text--row">Older</div>
