@@ -132,7 +132,7 @@
         <h3 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h3><p>强缓存：浏览器不与服务端协商直接取浏览器缓存</p>
 <p>协商缓存：浏览器会先向服务器确认资源的有效性后才决定是从缓存中取资源还是重新获取资源</p>
 <p><strong>实现</strong>：在nginx的请求头配置里加上 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location /picture/ &#123; </span><br><span class="line">    add_header Cache-Control no-cache;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location / &#123; </span><br><span class="line">    add_header Cache-Control no-cache;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>然后重启nginx：<code>nginx -s reload</code>使配置生效</p>
 <p>再次发起请求后，请求头会带上If-Modified-Since和If-None-Match </p>
@@ -140,7 +140,13 @@
 <p><strong>no-cache与no-store的区别</strong></p>
 <p>no-cache表示不缓存过期资源，缓存会向服务器进行有效处理确认之后处理资源</p>
 <p>而no-store才是真正的不进行缓存</p>
+<h3 id="APPLY"><a href="#APPLY" class="headerlink" title="APPLY()"></a>APPLY()</h3><p><code>apply()</code> 方法与 <code>call()</code> 方法非常相似<br>不同之处是：<br><code>call()</code> 方法分别接受参数。<br><code>apply()</code> 方法接受数组形式的参数。<br>如果要使用数组而不是参数列表，则 <code>apply()</code> 方法非常方便。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let person = &#123;</span><br><span class="line">  fullName: function(city, country) &#123;</span><br><span class="line">    return this.firstName + &quot; &quot; + this.lastName + &quot;,&quot; + city + &quot;,&quot; + country;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">let person1 = &#123;</span><br><span class="line">  firstName:&quot;John&quot;,</span><br><span class="line">  lastName: &quot;Doe&quot;</span><br><span class="line">&#125;</span><br><span class="line">person.fullName.apply(person1, [&quot;Oslo&quot;, &quot;Norway&quot;]);</span><br></pre></td></tr></table></figure>
 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let person = &#123;</span><br><span class="line">  fullName: function(city, country) &#123;</span><br><span class="line">    return this.firstName + &quot; &quot; + this.lastName + &quot;,&quot; + city + &quot;,&quot; + country;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">let person1 = &#123;</span><br><span class="line">  firstName:&quot;John&quot;,</span><br><span class="line">  lastName: &quot;Doe&quot;</span><br><span class="line">&#125;</span><br><span class="line">person.fullName.call(person1, &quot;Oslo&quot;, &quot;Norway&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>您可以使用 <code>Math.max()</code> 方法找到（数字列表中的）最大数字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.max.apply(null, [1,2,3]); // 也会返回 3</span><br></pre></td></tr></table></figure>
       </section>
 
       
@@ -152,8 +158,8 @@
     
     <div class="card-text">
       
-        <a href="/2022/04/01/react/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">react笔记</h2>
+        <a href="/2022/04/01/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">数据类型</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -210,7 +216,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>6</span>
+        <span>8</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -222,7 +228,7 @@
         <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
 </svg>
-        2
+        3
       </div>
     </div>
   </div>
@@ -267,7 +273,7 @@
   </div>
   <div class="widget-body">
     <div class="tags-cloud">
-      <a href="/tags/react/" style="font-size: 10px;" class="tags-cloud-0">react</a> <a href="/tags/%E5%AF%B9%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E7%BD%91%E7%BB%9C%E9%87%8D%E6%96%B0%E8%BF%9B%E8%A1%8C%E4%BA%86%E5%AD%A6%E4%B9%A0%EF%BC%8C%E6%9C%AC%E6%96%87%E4%B9%9F%E7%9B%B8%E5%BD%93%E4%BA%8E%E6%98%AF%E7%AC%94%E8%AE%B0/" style="font-size: 10px;" class="tags-cloud-0">对大学计算网络重新进行了学习，本文也相当于是笔记</a>
+      <a href="/tags/javaScript/" style="font-size: 10px;" class="tags-cloud-0">javaScript</a> <a href="/tags/react/" style="font-size: 10px;" class="tags-cloud-0">react</a> <a href="/tags/%E5%AF%B9%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E7%BD%91%E7%BB%9C%E9%87%8D%E6%96%B0%E8%BF%9B%E8%A1%8C%E4%BA%86%E5%AD%A6%E4%B9%A0%EF%BC%8C%E6%9C%AC%E6%96%87%E4%B9%9F%E7%9B%B8%E5%BD%93%E4%BA%8E%E6%98%AF%E7%AC%94%E8%AE%B0/" style="font-size: 10px;" class="tags-cloud-0">对大学计算网络重新进行了学习，本文也相当于是笔记</a>
     </div>
   </div>
 </section>
